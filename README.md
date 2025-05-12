@@ -1,5 +1,4 @@
 # Laporan Tugas Data Warehouse
-![Misi1](https://drive.google.com/drive/folders/1Od4_146G0RGChscWyGhVxrROqzA_BtPb?usp=sharing)
 
 ## Misi 1 - Dokumentasi Spesifikasi
 
