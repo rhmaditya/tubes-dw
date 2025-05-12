@@ -1,8 +1,5 @@
 ## Misi 1 - Dokumentasi Spesifikasi
 
-# LAPORAN PERANCANGAN DATA WAREHOUSE
-**Industri Sepak Bola Taktika: “Where Data Meets Strategy”**
-
 ## A. Profil Industri & Masalah Bisnis
 
 Di tengah transformasi digital dunia sepak bola, data kini menjadi aset penting untuk merumuskan strategi kemenangan. Namun, kompleksitas data mulai dari statistik pemain, jalannya pertandingan, hingga formasi dan taktik membuat klub dan pelatih kesulitan mengakses wawasan yang benar-benar relevan.
