@@ -1,14 +1,17 @@
-# Misi 1 - Dokumentasi Spesifikasi
+# Laporan Tugas Data Warehouse
+![Misi1](https://drive.google.com/drive/folders/1Od4_146G0RGChscWyGhVxrROqzA_BtPb?usp=sharing)
 
-## A. Profil Industri & Masalah Bisnis
+## Misi 1 - Dokumentasi Spesifikasi
+
+### A. Profil Industri & Masalah Bisnis
 
 Di tengah transformasi digital dunia sepak bola, data kini menjadi aset penting untuk merumuskan strategi kemenangan. Namun, kompleksitas data mulai dari statistik pemain, jalannya pertandingan, hingga formasi dan taktik membuat klub dan pelatih kesulitan mengakses wawasan yang benar-benar relevan.
 
 Taktika hadir sebagai penyedia layanan data analytics untuk sepak bola modern. Kami mengubah data mentah dari lebih dari 25.000 pertandingan dan 10.000 pemain Eropa menjadi insight taktis dan strategis untuk berbagai pihak: klub, pelatih, analis, media, bahkan fans. Tantangan utamanya adalah integrasi data dari berbagai sumber yang tidak terstruktur, sehingga dibutuhkan solusi Data Warehouse (DW) sebagai pondasi sistem analitik yang solid, akurat, dan mudah digunakan.
 
-## B. Daftar Stakeholder & Tujuan Bisnis
+### B. Daftar Stakeholder & Tujuan Bisnis
 
-### Stakeholder & Peran dalam Industri Sepak Bola
+#### Stakeholder & Peran dalam Industri Sepak Bola
 
 | Stakeholder          | Peran dalam Industri Sepak Bola                             | Tujuan Penggunaan Data Warehouse                           |
 |----------------------|------------------------------------------------------------|-----------------------------------------------------------|
@@ -18,7 +21,7 @@ Taktika hadir sebagai penyedia layanan data analytics untuk sepak bola modern. K
 | Media & Penyiar      | Menyampaikan berita dan analisis pertandingan               | Menyediakan statistik menarik dan prediktif untuk penonton |
 | Fans & Komunitas     | Konsumen informasi sepak bola                               | Mengakses insight mendalam, tidak hanya highlight atau skor|
 
-### Tujuan Bisnis
+#### Tujuan Bisnis
 
 - Mengoptimalkan strategi pertandingan berdasarkan data historis lawan
 - Meningkatkan efektivitas scouting pemain melalui data performa objektif
@@ -26,7 +29,7 @@ Taktika hadir sebagai penyedia layanan data analytics untuk sepak bola modern. K
 - Memberikan informasi taktis yang mudah diakses untuk media dan fans
 - Menyatukan sumber data pertandingan dalam satu sistem terpusat (DW)
 
-### Interview Simulasi (Pelatih Kepala):
+#### Interview Simulasi (Pelatih Kepala):
 
 1. Saat menyusun strategi melawan lawan tertentu, data apa yang paling Anda butuhkan?
 2. Apakah Anda ingin melihat performa pemain lawan berdasarkan formasi yang digunakan?
@@ -34,13 +37,13 @@ Taktika hadir sebagai penyedia layanan data analytics untuk sepak bola modern. K
 4. Apakah Anda lebih suka data visual (grafik, heatmap) atau tabel?
 5. Pernahkah Anda kehilangan peluang taktik karena keterlambatan data?
 
-### Studi Kasus
+#### Studi Kasus
 
 Banyak klub sepak bola di Eropa mengalami kesulitan dalam melakukan analisis taktik lawan karena data tersebar di banyak file, tidak real-time, dan tidak disesuaikan dengan kebutuhan pelatih. Dengan DW, semua data ini dapat diakses dalam satu sistem dan bisa ditampilkan sesuai kebutuhan pelatih — misal: "Rekap 5 pertandingan terakhir melawan tim dengan formasi 4-3-3."
 
-## C. Daftar Fakta & Dimensi
+### C. Daftar Fakta & Dimensi
 
-### Fakta (Measures)
+#### Fakta (Measures)
 
 - Jumlah Gol
 - Jumlah Assist
@@ -49,7 +52,7 @@ Banyak klub sepak bola di Eropa mengalami kesulitan dalam melakukan analisis tak
 - Rata-rata Rating Pemain
 - Penguasaan Bola (%)
 
-### Dimensi
+#### Dimensi
 
 - **Waktu**: Tanggal, musim, pekan ke-
 - **Pemain**: Nama, posisi, usia, tinggi, kemampuan individu
@@ -58,9 +61,9 @@ Banyak klub sepak bola di Eropa mengalami kesulitan dalam melakukan analisis tak
 - **Lokasi**: Stadion, status (home/away), kota pertandingan
 - **Formasi**: Formasi yang digunakan klub (misal: 4-3-3, 3-5-2)
 
-### Diagram Skema
+#### Diagram Skema
 
-#### Penjelasan Skema Bintang
+##### Penjelasan Skema Bintang
 
 Skema bintang (Star Schema) adalah model data dimensional yang umum digunakan dalam data warehouse untuk memfasilitasi analisis cepat dan efisien. Dalam skema ini:
 
@@ -75,7 +78,7 @@ Setiap tabel dimensi terhubung langsung ke tabel fakta melalui kunci primer/asin
 - Struktur mudah dipahami oleh analis bisnis dan pelatih
 - Mendukung visualisasi dan pelaporan yang fleksibel
 
-## D. Sumber Data & Metadata
+### D. Sumber Data & Metadata
 
 | Nama File    | Kaggle Konten Utama                             | Format | Frekuensi Update |
 |--------------|-------------------------------------------------|--------|------------------|
@@ -84,7 +87,7 @@ Setiap tabel dimensi terhubung langsung ke tabel fakta melalui kunci primer/asin
 | Team.csv     | Info klub: nama, formasi, pelatih               | CSV    | Triwulanan       |
 | League.csv   | Daftar liga, negara                             | CSV    | Tahunan          |
 
-### Contoh Metadata:
+#### Contoh Metadata:
 
 | Nama Kolom        | Tipe Data   | Deskripsi                                                   |
 |-------------------|-------------|-------------------------------------------------------------|
@@ -95,17 +98,17 @@ Setiap tabel dimensi terhubung langsung ke tabel fakta melalui kunci primer/asin
 | date              | DATE        | Tanggal pertandingan berlangsung                            |
 | possession_home   | FLOAT       | Persentase penguasaan bola oleh tim tuan rumah              |
 
-## E. Referensi
+### E. Referensi
 
 1. Hugomathien, “European Soccer Database,” Kaggle Dataset:  
    [Kaggle Link](https://www.kaggle.com/datasets/hugomathien/soccer)
    
 2. Kimball, Ralph. *The Data Warehouse Toolkit*
 
-# Misi 2 - Dokumentasi Desain
-## 1. Ringkasan Kebutuhan dari Misi
+## Misi 2 - Dokumentasi Desain
+### 1. Ringkasan Kebutuhan dari Misi
 
-### 1.1 Ringkasan Tabel Dimensi, Hirarki, dan Ukuran
+#### 1.1 Ringkasan Tabel Dimensi, Hirarki, dan Ukuran
 
 | Jenis   | Nama Tabel         | Hirarki/Detail     | Atribut                                                                 |
 |---------|--------------------|--------------------|-------------------------------------------------------------------------|
@@ -117,11 +120,11 @@ Setiap tabel dimensi terhubung langsung ke tabel fakta melalui kunci primer/asin
 | **Dimensi** | Dim_Lokasi          | Stadion → Kota → Status Home/Away                              |
 | **Dimensi** | Dim_Formasi         | Formasi → Strategi Taktikal                                     |
 
-### 1.2 Deskripsi Naratif Kebutuhan Bisnis
+#### 1.2 Deskripsi Naratif Kebutuhan Bisnis
 
 **Masalah bisnis:** Banyak klub kesulitan mengakses data taktis karena data tersebar, tidak real-time, dan tidak sesuai kebutuhan pelatih. DW diperlukan agar semua data terintegrasi dalam satu sistem yang cepat dan analitis.
 
-### 1.3 Metadata Bisnis
+#### 1.3 Metadata Bisnis
 
 | Atribut           | Definisi                                       | Pengguna Utama       | Sumber Data (CSV) | Catatan                        |
 |-------------------|------------------------------------------------|----------------------|-------------------|--------------------------------|
@@ -135,11 +138,11 @@ Setiap tabel dimensi terhubung langsung ke tabel fakta melalui kunci primer/asin
 | player_attributes | Gabungan kemampuan individu pemain            | Rekruter, Analis Klub | Player.csv        | Jika tidak digunakan → dicatat|
 | formation_used    | Formasi yang digunakan tim                     | Pelatih, Analis Klub | Team.csv/Match.csv| Nama diganti dari formation_classic |
 
-### 1.4 Inti Pendekatan Business-Driven
+#### 1.4 Inti Pendekatan Business-Driven
 
 Pendekatan yang digunakan berfokus pada kebutuhan pelatih, analis, media, dan fans.
 
-### 1.5 Dokumentasi Skema Sumber dan Penyesuaian
+#### 1.5 Dokumentasi Skema Sumber dan Penyesuaian
 
 Sumber Data & File: Data diperoleh dari file seperti Match.csv, Player.csv, Team.csv, dan League.csv, bersumber dari dataset Kaggle yang di-update secara mingguan hingga triwulanan.
 
@@ -147,9 +150,9 @@ Penyesuaian Atribut: Atribut teknis diubah namanya menjadi istilah bisnis agar m
 
 Pendekatan yang digunakan adalah business-driven, yaitu fokus awal pada kebutuhan pengguna bisnis. Atribut yang tidak digunakan tetap dicatat.
 
-## 2. Skema
+### 2. Skema
 
-### Penjelasan Skema Bintang
+#### Penjelasan Skema Bintang
 
 Skema bintang (Star Schema) adalah model data dimensional yang umum digunakan dalam data warehouse untuk memfasilitasi analisis cepat dan efisien. Dalam skema ini:
 
@@ -200,13 +203,13 @@ Dimensi ini menyediakan konteks kompetitif di mana pertandingan dilangsungkan un
 
 Dimensi ini menyediakan konteks formasi yang dipakai dan tipe strategi dari formasi supaya sesuai antar hierarki yang terdiri dari: formasi (misal: taktik 4-3-3, 5-4-1) dan strategi (misal: menyerang, bertahan).
 
-## 4. Justifikasi Desain Konseptual
+### 4. Justifikasi Desain Konseptual
 
-### 4.1 Alasan Pemilihan Skema Bintang (Star Schema)
+#### 4.1 Alasan Pemilihan Skema Bintang (Star Schema)
 
 Desain konseptual menggunakan skema bintang dipilih karena memiliki keunggulan utama dalam kemudahan eksplorasi data oleh pengguna non-teknis, kinerja query yang cepat berkat struktur sederhana yang mendukung indeksasi efisien, serta kompatibilitas tinggi dengan OLAP dan visualisasi analitik. Dalam konteks industri sepak bola, skema ini sangat cocok untuk analisis performa, karena memudahkan penyajian informasi berdasarkan waktu, pemain, tim, maupun liga secara fleksibel.
 
-### 4.2 Relevansi Setiap Komponen
+#### 4.2 Relevansi Setiap Komponen
 
 Setiap komponen dalam skema dirancang berdasarkan pertanyaan analitik kunci dan kebutuhan stakeholder dari Misi 1:
 
@@ -218,7 +221,7 @@ Setiap komponen dalam skema dirancang berdasarkan pertanyaan analitik kunci dan 
 | **Dim_Waktu**              | Diperlukan untuk analisis tren historis, performa musiman, dan evaluasi tahunan. |
 | **Dim_Liga**               | Berguna untuk segmentasi berdasarkan kompetisi yang diikuti, serta membandingkan performa antar liga. |
 
-### 4.3 Kesesuaian dengan Tujuan Analitik
+#### 4.3 Kesesuaian dengan Tujuan Analitik
 
 Skema ini dapat menjawab kebutuhan seperti:
 
@@ -227,17 +230,17 @@ Skema ini dapat menjawab kebutuhan seperti:
 - Membandingkan durasi bermain rata-rata berdasarkan posisi pemain.
 - Menganalisis pengaruh pelatih baru terhadap performa tim.
 
-### 4.4 Integrasi Sumber Data
+#### 4.4 Integrasi Sumber Data
 
 Desain ini juga mempertimbangkan struktur data mentah dari file seperti match.csv, player.csv, team.csv, dan league.csv yang telah diuraikan pada Misi 1. Ketersediaan atribut-atribut utama dalam sumber data menjamin kepraktisan implementasi skema ini secara teknis.
 
-## 5. Kesesuaian dengan sumber data
+### 5. Kesesuaian dengan sumber data
 
-### 5.1 Asal Data
+#### 5.1 Asal Data
 
 Data yang digunakan dalam skema konseptual dengan pendekatan multidimensional berasal dari European Soccer Database dengan platform Kaggle. Dataset tersebut merupakan sebuah dataset historis yang mengumpulkan data lebih dari 25.000 pertandingan sepak bola, 10.000 pemain dan 11 negara yang berada di Eropa. Dataset tersebut berisikan data statistik pertandingan, informasi para pemain, kompetisi yang diikuti dan detail dari klub yang dibentuk dalam format tabel. Hal tersebut menjadi dasar sistem analitik pada performa sepak bola modern.
 
-### 5.2 Hubungan Skema dengan Data Asal
+#### 5.2 Hubungan Skema dengan Data Asal
 
 Desain konseptual multidimensi yang telah dirancang memiliki tingkat kesesuaian yang tinggi dengan struktur data yang tersedia dalam dataset European Soccer Database. Setiap komponen yang terdapat dalam skema, baik fakta maupun dimensi dapat dipetakan secara langsung ke dalam tabel dan atribut dalam sumber dataset. Hal tersebut memastikan bahwa proses pengisian data ke dalam skema data warehouse efisien dan realistis.
 
